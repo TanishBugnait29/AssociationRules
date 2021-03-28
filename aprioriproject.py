@@ -189,13 +189,8 @@ if fileNumberSelected == '5':
     fileName = "csv/Customdata.csv"
 if fileNumberSelected == '6':
     fileName = "csv/fruits.csv"
-
 minSupport = int(minSupport)
 minConfidence = int(minConfidence)
-
-nonFrequentSets = []
-allFrequentItemSets = []
-tempFrequentItemSets = []
 itemSet = []
 countOfTransactions = 0
 topFrequentArray = []
