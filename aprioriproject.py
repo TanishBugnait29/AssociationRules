@@ -40,8 +40,6 @@ def frequentItemSetLk(CandidateList, countOfTransactions, minSupport, itemSet, t
             if support >= minSupport:
                 frequent_Items_Array.append(CandidateList[x-1])# Product name will display on even place
                 frequent_Items_Array.append(CandidateList[x])# Product name count(number of times it occurs) will display on odd place
-            
-    
 
     for k in frequent_Items_Array:
         topFrequentArray.append(k)
