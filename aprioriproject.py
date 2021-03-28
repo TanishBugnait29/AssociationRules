@@ -101,14 +101,14 @@ def candidateSetsCk(itemSet,frequent_Items_Array, countOfTransactions, minSuppor
 
 
 #   This function takes all the frequent sets as the input and generates all possible Association Rules
-def findingPossibleAssociationRules(frequentSets):
+def findingPossibleAssociationRules(frequentSets): 
     associationRule = []
     for item in frequentSets: # for all items in the list (combinations of 1,2,3 item set)
         if isinstance(item, list): #The isinstance() function checks if the object (first argument) is an instance 
                                         #or subclass of classinfo class (second argument).
             if len(item) != 0:
                 length = len(item) - 1
-                while length > 0:
+                while length > 0: 
                     combinations = list(itertools.combinations(item, length)) # Create all combinations
                     temp = []
                     LHS = []
@@ -135,7 +135,7 @@ def aprioriResult(rules, itemSet, minSupport, minConfidence):
         supportOfXandY = 0
         supportOfXandYinPercentage = 0
         for transaction in itemSet:
-            if set(rule[0]).issubset(set(transaction)):
+            if set(rule[0]).issubset(set(transaction)): # Checking if the rule is subset of Trasaction set
                 supportOfX = supportOfX + 1
             if set(rule[0] + rule[1]).issubset(set(transaction)):
                 supportOfXandY = supportOfXandY + 1
